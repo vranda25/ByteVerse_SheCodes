@@ -30,7 +30,16 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
+
+#anywhere
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000',
+# ]
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
 
 CORS_ALLOW_METHODS = [
     'DELETE',
@@ -40,6 +49,7 @@ CORS_ALLOW_METHODS = [
     'POST',
     'PUT',
 ]
+
 CORS_ALLOW_HEADERS = [
     'accept',
     'accept-encoding',
@@ -50,8 +60,37 @@ CORS_ALLOW_HEADERS = [
     'user-agent',
     'x-csrftoken',
     'x-requested-with',
-    "Access-Control-Allow-Origin"
+    'Access-Control-Allow-Origin',
 ]
+
+
+CORS_ALLOW_CREDENTIALS = True           #added from anywhere
+
+# ALLOWED_HOSTS = ['*']
+# AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# CORS_ORIGIN_ALLOW_ALL = True
+
+# CORS_ALLOW_METHODS = [
+#     'DELETE',
+#     'GET',
+#     'OPTIONS',
+#     'PATCH',
+#     'POST',
+#     'PUT',
+# ]
+# CORS_ALLOW_HEADERS = [
+#     'accept',
+#     'accept-encoding',
+#     'authorization',
+#     'content-type',
+#     'dnt',
+#     'origin',
+#     'user-agent',
+#     'x-csrftoken',
+#     'x-requested-with',
+#     "Access-Control-Allow-Origin"
+# ]
 # Application definition
 
 INSTALLED_APPS = [
