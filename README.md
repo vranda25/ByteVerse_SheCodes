@@ -1,6 +1,53 @@
-Udaan Backend is made using Django Rest Framework.
-Install requirements.txt for all required modules.
+# Udaan
+Taking women to new heights
 
+This is a platform created for women artisans to showcase their skills and get employment opportunities. Clients can view the profiles of these women artisans and book them for the services they provide. This project is built using React.js for the frontend and Django for the backend.
+
+## Installation 
+This is backend of our project. Frontend can be found at https://github.com/HetviSoni/Udaan-frontend
+
+To run this on your local machine:
+Clone the repository
+Move to the project directory
+cd udaan
+Install required modeules: pip install -r requirements.txt
+
+The backend is also deployed on pythonanywhere. Access the APIs using
+http://udaan.pythonanywhere.com/
+
+
+## Usage
+Women artisans can create a profile and showcase their skills.
+Clients can view the profiles of these women artisans.
+Clients can book an appointment for the services they provide.
+Women artisans can manage their bookings through their profile.
+
+## Features
+User authentication for women artisans and clients.
+Profile creation and management for women artisans.
+Booking management for clients and artisans.
+Booking search and management for clients.
+
+## Technologies Used
+React.js
+Django Rest Framework
+HTML
+CSS
+SCSS
+JavaScript
+
+## Contributing
+If you want to contribute to this project, please follow the below steps:
+
+Fork this repository.
+Clone the forked repository.
+Create a new branch with a descriptive name.
+Make your changes and commit them.
+Push your changes to your forked repository.
+Create a pull request.
+
+
+## API endpoints
 Register  :  Sign up as either Customer or Business
 http://udaan.pythonanywhere.com/api/accounts/register/            
         
@@ -47,7 +94,7 @@ http://udaan.pythonanywhere.com/api/service/status/
 “3” : decline
 
 
-service/completed  : Customer can check is_completed for his/her bookings only if service status is “accepted” (bina business ke accept kiye service complete kese ho skti h 🙂) and increases job_completed for a particular business
+service/completed  : Customer can check is_completed for his/her bookings only if service status is “accepted” (bina business ke accept kiye service complete kese ho skti h ) and increases job_completed for a particular business
 , service id must be provided (POST) (jo service complete ho gai h usse customer is_completed kr skta h)
 http://udaan.pythonanywhere.com/api/service/completed/
 
