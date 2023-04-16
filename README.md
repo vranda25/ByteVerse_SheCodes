@@ -76,7 +76,7 @@ Business/skills/all  : can see all skills of all businesses (only skills with us
 http://udaan.pythonanywhere.com/api/business/skills/all/
 
 
-Business/skills/particular  : can see all skills of a particular business (only skills) user id must be provided (GET) (jiske skills dekhne hai uska user id do response me saare skills in detail milenge)
+Business/skills/particular  : can see all skills of a particular business (only skills) user id must be provided (GET) 
 http://udaan.pythonanywhere.com/api/business/skills/particular/
 
 
@@ -84,11 +84,11 @@ Business/status  : Business can see all services/bookings for her along with sta
 http://udaan.pythonanywhere.com/api/business/status/
 
 
-service/post  : Customer can post a service/book a skill, skill id must be provided (jis skill ke liye booking krni h uss skill ki id dena padegi)(POST), can view list of all his services/booking (GET)
+service/post  : Customer can post a service/book a skill, skill id must be provided(POST), can view list of all his services/booking (GET)
 http://udaan.pythonanywhere.com/api/service/post/
 
 
-service/status  :  Business can change status of a service, service id and status must be provided by default status is pending(POST) (business ko service accept krna h to “status” : “2” n decline krna h to “status” :  “3”)
+service/status  :  Business can change status of a service, service id and status must be provided by default status is pending(POST)
 http://udaan.pythonanywhere.com/api/service/status/
 
 “1” : pending
@@ -96,7 +96,7 @@ http://udaan.pythonanywhere.com/api/service/status/
 “3” : decline
 
 
-service/completed  : Customer can check is_completed for his/her bookings only if service status is “accepted” (bina business ke accept kiye service complete kese ho skti h ) and increases job_completed for a particular business
+service/completed  : Customer can check is_completed for his/her bookings only if service status is “accepted” and increases job_completed for a particular business
 , service id must be provided (POST) (jo service complete ho gai h usse customer is_completed kr skta h)
 http://udaan.pythonanywhere.com/api/service/completed/
 
