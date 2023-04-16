@@ -1,6 +1,8 @@
 from .serializer import *
 from accounts.models import CustomUser
 from accounts.serializer import CustomUserSerializer
+from service.models import Service
+from service.serializer import ServiceSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
@@ -205,3 +207,57 @@ class ParticularBusinessSkillViewForCustomer(APIView):
             })
 
 
+class ServicesStatus(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        try:
+            user = request.user
+            print(user)
+            query_skill = Skills.objects.filter(user=user)
+            serializer_skill = SkillSerializer(query_skill, many=True)
+            print(serializer_skill.data)
+
+            skills = []
+            for i in serializer_skill.data:
+                skills.append(i.get('id'))
+            print(skills)
+
+            services = []
+            pending_services = []
+            accepted_not_completed_services = []
+            completed_services = []
+            for i in skills:
+                query_service = Service.objects.filter(skill=i)
+                serializer_service = ServiceSerializer(query_service, many=True)
+                for j in serializer_service.data:
+                    print(j)
+                    status = j.get('status')
+                    if status == '1':
+                        pending_services.append(j)
+                    elif status == '2':
+                        if j.get('is_completed'):
+                            completed_services.append(j)
+                        else:
+                            accepted_not_completed_services(j)
+
+                    services.append(j.get('id'))
+            # print(completed_services)
+            # print(accepted_not_completed_services)
+            # print(pending_services)
+            serializer = []
+            serializer.append({'completed' : completed_services})
+            serializer.append({'pending' : pending_services})
+            serializer.append({'accepted_not_completed' : accepted_not_completed_services})
+            return Response({
+                'data': serializer
+            })
+
+
+        except Exception as e:
+                print(e)
+                return Response({
+                    'status': 400,
+                    'message': 'Something went wrong',
+                    'data': {},
+            })
