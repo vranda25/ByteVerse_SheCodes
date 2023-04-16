@@ -257,9 +257,9 @@ class ServicesCompletedByParticularBusiness(APIView):
             print(skills)
 
             services = []
+            customer_name = []
+            skill_name = []
             for i in skills:
-                customer_name = []
-                skill_name = []
                 query_service = Service.objects.filter(skill=i)
                 serializer_service = ServiceSerializer(query_service, many=True)
                 for j in serializer_service.data:
