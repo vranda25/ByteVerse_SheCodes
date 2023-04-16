@@ -6,47 +6,47 @@ This is a platform created for women artisans to showcase their skills and get e
 ## Installation 
 This is backend of our project. Frontend can be found at https://github.com/HetviSoni/Udaan-frontend<br />
 
-To run this on your local machine:  
-Clone the repository
-Move to the project directory
-cd udaan
-Install required modeules: pip install -r requirements.txt
+To run this on your local machine:  <br />
+Clone the repository<br />
+Move to the project directory<br />
+cd udaan<br />
+Install required modeules: pip install -r requirements.txt<br /><br />
 
 *Uses simple Jwt Authentication. After registration and Login all APIs require Authentication.
 
-The backend is also deployed on pythonanywhere. Access the APIs using
+The backend is also deployed on pythonanywhere. Access the APIs using<br />
 http://udaan.pythonanywhere.com/
 
 
 ## Usage
-Women artisans can create a profile and showcase their skills.
-Clients can view the profiles of these women artisans.
-Clients can book an appointment for the services they provide.
-Women artisans can manage their bookings through their profile.
+Women artisans can create a profile and showcase their skills.<br />
+Clients can view the profiles of these women artisans.<br />
+Clients can book an appointment for the services they provide.<br />
+Women artisans can manage their bookings through their profile.<br />
 
 ## Features
-User authentication for women artisans and clients.
-Profile creation and management for women artisans.
-Booking management for clients and artisans.
-Booking search and management for clients.
+User authentication for women artisans and clients.<br />
+Profile creation and management for women artisans.<br />
+Booking management for clients and artisans.<br />
+Booking search and management for clients.<br />
 
 ## Technologies Used
-React.js
-Django Rest Framework
-HTML
-CSS
-SCSS
-JavaScript
+React.js<br />
+Django Rest Framework<br />
+HTML<br />
+CSS<br />
+SCSS<br />
+JavaScript<br />
 
 ## Contributing
 If you want to contribute to this project, please follow the below steps:
-
-Fork this repository.
-Clone the forked repository.
-Create a new branch with a descriptive name.
-Make your changes and commit them.
-Push your changes to your forked repository.
-Create a pull request.
+<br />
+Fork this repository.<br />
+Clone the forked repository.<br />
+Create a new branch with a descriptive name.<br />
+Make your changes and commit them.<br />
+Push your changes to your forked repository.<br />
+Create a pull request.<br />
 
 
 ## API endpoints
