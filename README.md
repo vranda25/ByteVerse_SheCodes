@@ -1,4 +1,5 @@
 Udaan Backend is made using Django Rest Framework.
+Install requirements.txt for all required modules.
 
 Register  :  Sign up as either Customer or Business
 http://udaan.pythonanywhere.com/api/accounts/register/            
